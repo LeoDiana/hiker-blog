@@ -5,11 +5,12 @@
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react-hooks/recommended",
-    "plugin:import/recommended"
+    "plugin:import/recommended",
+    "plugin:prettier/recommended"
   ],
   "ignorePatterns": ["dist", ".eslintrc.cjs"],
   "parser": "@typescript-eslint/parser",
-  "plugins": ["react-refresh", "unused-imports", "sort-exports"],
+  "plugins": ["react-refresh", "unused-imports", "sort-exports", "prettier"],
   "rules": {
     "camelcase": "error",
     "no-unused-vars": "off",
@@ -23,26 +24,11 @@
         "argsIgnorePattern": "^_"
       }
     ],
-    "react-refresh/only-export-components": [
-      "warn",
-      { "allowConstantExport": true }
-    ],
+    "react-refresh/only-export-components": ["warn", { "allowConstantExport": true }],
     "import/order": [
       "error",
       {
-        "groups": [
-          [
-            "builtin",
-            "external"
-          ],
-          "internal",
-          "parent",
-          [
-            "sibling",
-            "index"
-          ],
-          "object"
-        ],
+        "groups": [["builtin", "external"], "internal", "parent", ["sibling", "index"], "object"],
         "newlines-between": "always",
         "alphabetize": {
           "order": "asc",
@@ -58,8 +44,6 @@
         "sortExportKindFirst": "type"
       }
     ],
-    "no-console": [
-      "warn"
-    ]
+    "no-console": ["warn"]
   }
 }
