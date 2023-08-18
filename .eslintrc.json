@@ -1,12 +1,17 @@
 {
   "root": true,
-  "env": { "browser": true, "es2020": true },
+  "env": {
+    "browser": true,
+    "es2020": true,
+    "node": true
+  },
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react-hooks/recommended",
     "plugin:import/recommended",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:react/recommended"
   ],
   "ignorePatterns": ["dist", ".eslintrc.cjs"],
   "parser": "@typescript-eslint/parser",
@@ -24,7 +29,12 @@
         "argsIgnorePattern": "^_"
       }
     ],
-    "react-refresh/only-export-components": ["warn", { "allowConstantExport": true }],
+    "react-refresh/only-export-components": [
+      "warn",
+      {
+        "allowConstantExport": true
+      }
+    ],
     "import/order": [
       "error",
       {
@@ -44,6 +54,13 @@
         "sortExportKindFirst": "type"
       }
     ],
-    "no-console": ["warn"]
+    "no-console": ["warn"],
+    "react/function-component-definition": [
+      "error",
+      {
+        "namedComponents": "function-declaration"
+      }
+    ],
+    "react/react-in-jsx-scope": "off"
   }
 }
