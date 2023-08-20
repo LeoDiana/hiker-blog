@@ -3913,7 +3913,7 @@ __metadata:
     eslint-plugin-unused-imports: ^3.0.0
     postcss: ^8.4.28
     postcss-import: ^15.1.0
-    prettier: 3.0.2
+    prettier: ^3.0.2
     react: ^18.2.0
     react-dom: ^18.2.0
     styled-components: ^6.0.7
@@ -5288,7 +5288,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:3.0.2":
+"prettier@npm:^3.0.2":
   version: 3.0.2
   resolution: "prettier@npm:3.0.2"
   bin:

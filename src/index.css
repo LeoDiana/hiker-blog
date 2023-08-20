@@ -7,12 +7,12 @@
 :root {
   font-family: 'Figtree', sans-serif;
   background: white;
-  color: theme(colors.zinc.900);
+  color: theme('colors.zinc.900');
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    background-color: theme(colors.zinc.900);
+    background-color: theme('colors.zinc.900');
     color: white;
   }
 }

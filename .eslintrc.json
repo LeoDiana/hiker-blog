@@ -13,9 +13,29 @@
     "plugin:prettier/recommended",
     "plugin:react/recommended"
   ],
-  "ignorePatterns": ["dist", ".eslintrc.cjs"],
+  "ignorePatterns": [
+    "dist",
+    ".eslintrc.cjs"
+  ],
   "parser": "@typescript-eslint/parser",
-  "plugins": ["react-refresh", "unused-imports", "sort-exports", "prettier"],
+  "plugins": [
+    "react-refresh",
+    "unused-imports",
+    "sort-exports",
+    "prettier"
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    }
+  },
   "rules": {
     "camelcase": "error",
     "no-unused-vars": "off",
@@ -38,7 +58,19 @@
     "import/order": [
       "error",
       {
-        "groups": [["builtin", "external"], "internal", "parent", ["sibling", "index"], "object"],
+        "groups": [
+          [
+            "builtin",
+            "external"
+          ],
+          "internal",
+          "parent",
+          [
+            "sibling",
+            "index"
+          ],
+          "object"
+        ],
         "newlines-between": "always",
         "alphabetize": {
           "order": "asc",
@@ -54,13 +86,23 @@
         "sortExportKindFirst": "type"
       }
     ],
-    "no-console": ["warn"],
+    "no-console": [
+      "warn"
+    ],
     "react/function-component-definition": [
       "error",
       {
         "namedComponents": "function-declaration"
       }
     ],
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "react/no-unknown-property": [
+      "error",
+      {
+        "ignore": [
+          "css"
+        ]
+      }
+    ]
   }
 }
