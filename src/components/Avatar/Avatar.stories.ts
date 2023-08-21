@@ -6,6 +6,15 @@ const meta = {
   title: 'Components/Avatar',
   component: Avatar,
   tags: ['autodocs'],
+  args: {
+    size: 'md',
+  },
+  argTypes: {
+    size: {
+      options: ['sm', 'md', 'lg', 'xl'],
+      control: { type: 'radio' },
+    },
+  },
 } satisfies Meta<typeof Avatar>
 
 export default meta
