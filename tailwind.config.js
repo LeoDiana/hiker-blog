@@ -5,7 +5,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        'btn-primary': 'var(--btn-primary-clr)',
+        'text-primary': 'var(--text-primary-clr)',
+        'text-secondary': 'var(--text-secondary-clr)',
       },
     },
   },

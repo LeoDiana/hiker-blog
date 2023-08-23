@@ -5,9 +5,12 @@
 @tailwind utilities;
 
 :root {
+  --text-primary-clr: theme('colors.zinc.900');
+  --text-secondary-clr: theme('colors.zinc.500');
+
   font-family: 'Figtree', sans-serif;
   background: white;
-  color: theme('colors.zinc.900');
+  color: var(--text-primary-clr);
 }
 
 @media (prefers-color-scheme: dark) {
