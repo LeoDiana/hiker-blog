@@ -6,7 +6,7 @@ import styles, { AvatarStyleProps } from './styles.ts'
 // TODO implement redirect
 
 interface AvatarProps extends Partial<AvatarStyleProps> {
-  src: string
+  src?: string
   alt?: string
 }
 

@@ -13,7 +13,7 @@ export interface AvatarStyleProps {
 
 const styles = {
   avatar: ({ size }: AvatarStyleProps) => [
-    tw`rounded-full bg-zinc-400 overflow-hidden`,
+    tw`rounded-full bg-zinc-400 overflow-hidden shrink-0 flex`,
     sizes[size],
   ],
 }
