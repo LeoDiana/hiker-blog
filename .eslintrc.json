@@ -101,9 +101,14 @@
       "error",
       {
         "ignore": [
-          "css"
+          "css",
+          "tw",
+          "key"
         ]
       }
+    ],
+    "react/jsx-key": [
+      "error"
     ]
   }
 }
