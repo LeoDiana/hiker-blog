@@ -1912,6 +1912,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@heroicons/react@npm:^2.0.18":
+  version: 2.0.18
+  resolution: "@heroicons/react@npm:2.0.18"
+  peerDependencies:
+    react: ">= 16"
+  checksum: 597e8668818623d568a302e343ef06b69f62ce297c14b88c2ebbfed0c0f00cd85ec44fae33ec8a249931b4e7dcf145743ae3198095a9f4682108de5155f5f4c3
+  languageName: node
+  linkType: hard
+
 "@humanwhocodes/config-array@npm:^0.11.10":
   version: 0.11.10
   resolution: "@humanwhocodes/config-array@npm:0.11.10"
@@ -4147,7 +4156,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:>=16, @types/react@npm:^18.2.15":
+"@types/react@npm:*, @types/react@npm:>=16, @types/react@npm:^18.2.20":
   version: 18.2.20
   resolution: "@types/react@npm:18.2.20"
   dependencies:
@@ -7564,6 +7573,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "hikers-blog@workspace:."
   dependencies:
+    "@heroicons/react": ^2.0.18
     "@storybook/addon-essentials": ^7.3.2
     "@storybook/addon-interactions": ^7.3.2
     "@storybook/addon-links": ^7.3.2
@@ -7573,7 +7583,7 @@ __metadata:
     "@storybook/react": ^7.3.2
     "@storybook/react-vite": ^7.3.2
     "@storybook/testing-library": ^0.2.0
-    "@types/react": ^18.2.15
+    "@types/react": ^18.2.20
     "@types/react-dom": ^18.2.7
     "@typescript-eslint/eslint-plugin": ^6.0.0
     "@typescript-eslint/parser": ^6.0.0
