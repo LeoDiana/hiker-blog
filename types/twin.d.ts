@@ -13,6 +13,7 @@ declare module 'react' {
     css?: CSSProp
     tw?: string
   }
+
   // The inline svg css prop
   interface SVGProps<T> extends SVGProps<SVGSVGElement> {
     css?: CSSProp
@@ -20,11 +21,13 @@ declare module 'react' {
   }
 }
 
+// Commented code below caused problems with React "key" prop
+
 // The 'as' prop on styled components
-declare global {
-  namespace JSX {
-    interface IntrinsicAttributes<T> extends DOMAttributes<T> {
-      as?: string | Element
-    }
-  }
-}
+// declare global {
+//   namespace JSX {
+//     interface IntrinsicAttributes<T> extends DOMAttributes<T> {
+//       as?: string | Element
+//     }
+//   }
+// }
