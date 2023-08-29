@@ -30,9 +30,12 @@ jobs:
       - name: Create test build
         run: yarn build
 
-      - name: Send message
-        uses: yamaks2306/telegram-notification@main
-        if: always()
+      - name: Telegram Action
+        # You may pin to the exact commit or the version.
+        # uses: xinthink/action-telegram@20b3085f4d1aa43c08c29411536b8b48658fc169
+        uses: xinthink/action-telegram@v1.1
         with:
-          chat_id: ${{ secrets.TG_CHAT_ID }}
-          token: ${{ secrets.TG_TOKEN }}
+          # The Telegram Bot token
+          botToken: ${{ secrets.TG_TOKEN }}
+          # The target to which the message will be sent, can be a Telegram Channel or Group
+          chatId:  ${{ secrets.TG_CHAT_ID }}
