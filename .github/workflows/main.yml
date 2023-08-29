@@ -39,3 +39,4 @@ jobs:
           botToken: ${{ secrets.TG_TOKEN }}
           # The target to which the message will be sent, can be a Telegram Channel or Group
           chatId:  ${{ secrets.TG_CHAT_ID }}
+          jobStatus: ${{ job.status }}
