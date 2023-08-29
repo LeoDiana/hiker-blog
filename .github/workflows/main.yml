@@ -36,7 +36,7 @@ jobs:
         uses: xinthink/action-telegram@v1.1
         with:
           # The Telegram Bot token
-          botToken: ${{ secrets.TG_TOKEN }}
+          botToken: ${{ secrets.BOTTOKEN }}
           # The target to which the message will be sent, can be a Telegram Channel or Group
-          chatId:  ${{ secrets.TG_CHAT_ID }}
+          chatId:  ${{ secrets.CHATID }}
           jobStatus: ${{ job.status }}
