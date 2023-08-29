@@ -1,7 +1,7 @@
 import Place from './pages/Place'
 
 function App() {
-  return <Place />
+  return abc
 }
 
 export default App
