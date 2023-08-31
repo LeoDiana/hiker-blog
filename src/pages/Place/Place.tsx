@@ -1,4 +1,5 @@
 import { ArrowLongUpIcon, MapPinIcon, TagIcon } from '@heroicons/react/24/outline'
+import { useTranslation } from 'react-i18next'
 import tw from 'twin.macro'
 
 import Button from '../../components/Button'
@@ -24,6 +25,7 @@ const page = {
 
 function Place() {
   const { title, height, location, complexity, description, tags } = page
+  const { t } = useTranslation()
 
   return (
     <div tw='m-16'>
@@ -61,12 +63,12 @@ function Place() {
         </div>
       </div>
       <div css={styles.experiencesSection}>
-        <h2 css={styles.hikersExperiences}>Hikers experiences</h2>
+        <h2 css={styles.hikersExperiences}>{t('place.hikersExperiences')}</h2>
         <div css={styles.experiences}>
           <HikerExperience />
         </div>
-        <Button variant='tertiary'>Read more</Button>
-        <Button>Add your experience</Button>
+        <Button variant='tertiary'>{t('readMore')}</Button>
+        <Button>{t('place.addYourExperience')}</Button>
       </div>
     </div>
   )
