@@ -17,7 +17,8 @@
   "ignorePatterns": [
     "dist",
     ".eslintrc.cjs",
-    "types/twin.d.ts"
+    "types/twin.d.ts",
+    "scripts/*"
   ],
   "parser": "@typescript-eslint/parser",
   "plugins": [

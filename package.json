@@ -11,7 +11,8 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "new-comp": "scripts/createNewComponent.sh"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
