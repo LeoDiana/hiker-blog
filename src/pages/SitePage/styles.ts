@@ -1,5 +1,7 @@
 import tw from 'twin.macro'
 
+import { Complexity } from './types.ts'
+
 const styles = {
   title: tw`text-5xl font-semibold`,
   description: tw`text-base`,
@@ -13,6 +15,18 @@ const styles = {
   statsRow: tw`flex flex-row gap-2 mt-1`,
   withIcon: tw`flex flex-row gap-1 items-center`,
   additionalInfo: tw`flex flex-col gap-6 mt-6`,
+  complexity: (complexity: Complexity) => {
+    switch (complexity) {
+      case Complexity.low:
+        return tw`text-green-500`
+      case Complexity.medium:
+        return tw`text-yellow-500`
+      case Complexity.high:
+        return tw`text-orange-500`
+      case Complexity.extreme:
+        return tw`text-red-500`
+    }
+  },
 }
 
 export default styles

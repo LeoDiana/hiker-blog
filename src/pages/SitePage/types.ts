@@ -1,12 +1,3 @@
-enum Complexity {
-  low = 'low',
-  medium = 'medium',
-  high = 'high',
-  extreme = 'extreme',
-}
-
-type Tag = string
-
 export interface Experience {
   id: string
   author: string
@@ -14,6 +5,8 @@ export interface Experience {
   summary: string
   images: string[]
 }
+
+type Tag = string
 
 export interface Site {
   title: string
@@ -24,4 +17,11 @@ export interface Site {
   tags: Tag[]
   img: string
   popularity: number
+}
+
+export enum Complexity {
+  low = 'low',
+  medium = 'medium',
+  high = 'high',
+  extreme = 'extreme',
 }

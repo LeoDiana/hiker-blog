@@ -1,4 +1,4 @@
-import { Experience, Site } from './types.ts'
+import { Complexity, Experience, Site } from './types.ts'
 
 const imgSrc =
   'https://images.pexels.com/photos/933054/pexels-photo-933054.jpeg?cs=srgb&dl=pexels-joyston-judah-933054.jpg&fm=jpg'
@@ -16,7 +16,7 @@ function useSitePage() {
     title: 'Mont Blanc',
     height: 4807,
     location: 'France, Italy',
-    complexity: 'medium',
+    complexity: Complexity.high,
     description:
       'Mont Blanc is the highest mountain in the Alps and Western Europe, and the highest mountain in Europe outside the Caucasus mountains, rising 4,807.81 m above sea level, located on the French-Italian border. It is the second-most prominent mountain in Europe, after Mount Elbrus, and it is the eleventh most prominent mountain summit in the world.',
     tags: ['Seven Summits', 'Europe', 'Alps'],
@@ -43,12 +43,10 @@ function useSitePage() {
     },
   ]
 
-  const page = {
+  return {
     site,
     experiences,
   } satisfies SitePage
-
-  return page
 }
 
 export default useSitePage

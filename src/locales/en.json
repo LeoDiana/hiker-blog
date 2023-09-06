@@ -6,5 +6,11 @@
     "addYourExperience": "Add your experience",
     "tags": "Tags",
     "popularity": "{{popularity}}% were here"
+  },
+  "complexity": {
+    "low": "Low",
+    "medium": "Medium",
+    "high": "High",
+    "extreme": "Extreme"
   }
 }

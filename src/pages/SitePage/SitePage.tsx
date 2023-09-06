@@ -35,7 +35,7 @@ function SitePage() {
             </div>
           </div>
           <div css={styles.statsRow}>
-            <p>{complexity}</p>
+            <p css={styles.complexity(complexity)}>{t(`complexity.${complexity}`)}</p>
             <p>{t('site.popularity', { popularity })}</p>
           </div>
           <div css={styles.additionalInfo}>
