@@ -1,20 +1,14 @@
 import { ReactNode } from 'react'
 
-import styles, { ButtonStyleProps } from './styles.ts'
+import styles, { ButtonStyle } from './styles.ts'
 
-interface ButtonProps extends Partial<ButtonStyleProps> {
+interface Button extends Partial<ButtonStyle> {
   children: ReactNode
   onClick?: () => void
   disabled?: boolean
 }
 
-function Button({
-  children,
-  onClick,
-  variant = 'primary',
-  size = 'md',
-  disabled = false,
-}: ButtonProps) {
+function Button({ children, onClick, variant = 'primary', size = 'md', disabled = false }: Button) {
   return (
     <button onClick={onClick} disabled={disabled} css={styles.button({ variant, size })}>
       {children}

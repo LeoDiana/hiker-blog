@@ -2,11 +2,11 @@ import { TwStyle } from 'twin.macro'
 
 import styles from './styles.ts'
 
-interface LocationProps {
+interface Location {
   customStyles?: TwStyle
 }
 
-function Location({ customStyles }: LocationProps) {
+function Location({ customStyles }: Location) {
   return (
     <div css={styles.container(customStyles)}>
       <iframe

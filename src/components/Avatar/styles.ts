@@ -7,12 +7,12 @@ const sizes = {
   xl: tw`w-40 h-40`,
 } as const
 
-export interface AvatarStyleProps {
+export interface AvatarStyle {
   size: keyof typeof sizes
 }
 
 const styles = {
-  avatar: ({ size }: AvatarStyleProps) => [
+  avatar: ({ size }: AvatarStyle) => [
     tw`rounded-full bg-zinc-400 overflow-hidden shrink-0 flex`,
     sizes[size],
   ],

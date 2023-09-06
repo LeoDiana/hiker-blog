@@ -12,13 +12,13 @@ const variants = {
   tertiary: tw`text-zinc-500 underline disabled:opacity-50`,
 } as const
 
-export interface ButtonStyleProps {
+export interface ButtonStyle {
   variant: keyof typeof variants
   size: keyof typeof sizes
 }
 
 const styles = {
-  button: ({ variant, size }: ButtonStyleProps) => [tw`px-8`, sizes[size], variants[variant]],
+  button: ({ variant, size }: ButtonStyle) => [tw`px-8`, sizes[size], variants[variant]],
 }
 
 export default styles

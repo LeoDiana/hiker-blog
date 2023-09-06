@@ -5,13 +5,13 @@ import styles from './styles.ts'
 
 // TODO Open full image view (with carousel) on click
 
-interface ImageProps {
+interface Image {
   src: string
   customStyles?: TwStyle
   alt?: string
 }
 
-function Image({ src, customStyles, alt = "User's photo" }: ImageProps) {
+function Image({ src, customStyles, alt = "User's photo" }: Image) {
   const [isError, setIsError] = useState(false)
 
   return (

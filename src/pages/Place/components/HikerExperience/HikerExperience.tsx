@@ -1,10 +1,10 @@
-import Avatar from '../Avatar'
-import Image from '../Image'
+import Avatar from '../../../../components/Avatar'
+import Image from '../../../../components/Image'
 
 import styles from './styles.ts'
 import 'twin.macro'
 
-interface HikerExperienceProps {}
+interface HikerExperience {}
 
 const experience = {
   author: 'Eduard Redcliff',
@@ -17,7 +17,7 @@ const imgSrc =
   'https://images.pexels.com/photos/933054/pexels-photo-933054.jpeg?cs=srgb&dl=pexels-joyston-judah-933054.jpg&fm=jpg'
 
 // eslint-disable-next-line no-empty-pattern
-function HikerExperience({}: HikerExperienceProps) {
+function HikerExperience({}: HikerExperience) {
   const { author, date, summary } = experience
 
   return (

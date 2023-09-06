@@ -17,12 +17,12 @@ function pickColor(text: string) {
   return colors[sum % colors.length]
 }
 
-interface TagStyleProps {
+interface TagStyle {
   text: string
 }
 
 const styles = {
-  tag: ({ text }: TagStyleProps) => [
+  tag: ({ text }: TagStyle) => [
     tw`text-sm text-zinc-900 leading-none rounded-lg py-1 px-2 w-min whitespace-nowrap`,
     pickColor(text),
   ],

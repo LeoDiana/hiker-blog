@@ -1,16 +1,16 @@
 import { useState } from 'react'
 
-import styles, { AvatarStyleProps } from './styles.ts'
+import styles, { AvatarStyle } from './styles.ts'
 
 // TODO add default image
 // TODO implement redirect
 
-interface AvatarProps extends Partial<AvatarStyleProps> {
+interface Avatar extends Partial<AvatarStyle> {
   src?: string
   alt?: string
 }
 
-function Avatar({ src, alt = 'User avatar', size = 'md' }: AvatarProps) {
+function Avatar({ src, alt = 'User avatar', size = 'md' }: Avatar) {
   const [isError, setIsError] = useState(false)
 
   return (
