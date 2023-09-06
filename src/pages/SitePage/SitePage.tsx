@@ -1,5 +1,4 @@
 import { ArrowLongUpIcon, MapPinIcon, TagIcon } from '@heroicons/react/24/outline'
-import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import tw from 'twin.macro'
 
@@ -18,11 +17,13 @@ const EXPANDED_EXPERIENCES = 10
 function SitePage() {
   const { t } = useTranslation()
   const {
-    site: { title, height, location, complexity, description, tags, img, popularity },
-    experiences,
+    isReadMoreOpen,
+    expandExperiences,
+    data: {
+      site: { title, height, location, complexity, description, tags, img, popularity },
+      experiences,
+    },
   } = useSitePage()
-
-  const [isReadMoreOpen, setIsReadMoreOpen] = useState(false)
 
   return (
     <div tw='m-16'>
@@ -69,7 +70,7 @@ function SitePage() {
             ))}
         </div>
         {!isReadMoreOpen && (
-          <Button variant='tertiary' onClick={() => setIsReadMoreOpen(true)}>
+          <Button variant='tertiary' onClick={expandExperiences}>
             {t('readMore')}
           </Button>
         )}

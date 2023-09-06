@@ -1,14 +1,23 @@
+import { useState } from 'react'
+
 import { Complexity, Experience, Site } from './types.ts'
 
 const imgSrc =
   'https://images.pexels.com/photos/933054/pexels-photo-933054.jpeg?cs=srgb&dl=pexels-joyston-judah-933054.jpg&fm=jpg'
 
 interface SitePage {
+  // this is what api will return
   site: Site
   experiences: Experience[]
 }
 
 function useSitePage() {
+  const [isReadMoreOpen, setIsReadMoreOpen] = useState(false)
+
+  function expandExperiences() {
+    setIsReadMoreOpen(true)
+  }
+
   // get id from route
   // retrieve data using this id
 
@@ -60,9 +69,13 @@ function useSitePage() {
   ]
 
   return {
-    site,
-    experiences,
-  } satisfies SitePage
+    isReadMoreOpen,
+    expandExperiences,
+    data: {
+      site,
+      experiences,
+    } satisfies SitePage,
+  }
 }
 
 export default useSitePage
