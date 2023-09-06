@@ -1,4 +1,4 @@
-import Place from './pages/Place'
+import Place from './pages/SitePage'
 
 function App() {
   return <Place />

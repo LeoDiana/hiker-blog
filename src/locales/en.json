@@ -1,7 +1,10 @@
 {
   "readMore": "Read more",
-  "place": {
+  "site": {
+    "height": "{{height}} m",
     "hikersExperiences": "Hikers experiences",
-    "addYourExperience": "Add your experience"
+    "addYourExperience": "Add your experience",
+    "tags": "Tags",
+    "popularity": "{{popularity}}% were here"
   }
 }
