@@ -1,7 +1,8 @@
 import 'twin.macro'
 
-import Avatar from '../../../../components/Avatar'
-import Image from '../../../../components/Image'
+import Avatar from 'components/Avatar'
+import Image from 'components/Image'
+
 import { Experience } from '../../types.ts'
 
 import styles from './styles.ts'

@@ -25,10 +25,20 @@
     "react-refresh",
     "unused-imports",
     "sort-exports",
-    "prettier"
+    "prettier",
+    "import"
   ],
   "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [
+        ".ts",
+        ".tsx"
+      ]
+    },
     "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true
+      },
       "node": {
         "extensions": [
           ".js",
@@ -78,7 +88,14 @@
         "alphabetize": {
           "order": "asc",
           "caseInsensitive": true
-        }
+        },
+        "pathGroups": [
+          {
+            "pattern": "components/*",
+            "group": "internal",
+            "position": "after"
+          }
+        ]
       }
     ],
     "sort-exports/sort-exports": [
@@ -111,6 +128,7 @@
     ],
     "react/jsx-key": [
       "error"
-    ]
+    ],
+    "import/no-unresolved": "error"
   }
 }

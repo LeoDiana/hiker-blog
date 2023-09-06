@@ -2,10 +2,10 @@ import { ArrowLongUpIcon, MapPinIcon, TagIcon } from '@heroicons/react/24/outlin
 import { useTranslation } from 'react-i18next'
 import tw from 'twin.macro'
 
-import Button from '../../components/Button'
-import Image from '../../components/Image'
-import Location from '../../components/Location'
-import Tag from '../../components/Tag'
+import Button from 'components/Button'
+import Image from 'components/Image'
+import Location from 'components/Location'
+import Tag from 'components/Tag'
 
 import HikerExperience from './components/HikerExperience'
 import styles from './styles.ts'
