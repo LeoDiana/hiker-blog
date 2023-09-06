@@ -41,6 +41,22 @@ function useSitePage() {
         "Greetings, fellow adventurers! Today, I am thrilled to share with you the incredible tale of my ascent to Mont Blanc, the majestic monarch of the European Alps. Rising above the pristine landscapes of France and Italy, Mont Blanc's allure is irresistible to mountaineers seeking a challenge and a glimpse into the realm of eternal snow and ice.",
       images: [imgSrc, imgSrc],
     },
+    {
+      id: '234534',
+      author: 'Eduard Redcliff',
+      date: '23.10.2013',
+      summary:
+        "Greetings, fellow adventurers! Today, I am thrilled to share with you the incredible tale of my ascent to Mont Blanc, the majestic monarch of the European Alps. Rising above the pristine landscapes of France and Italy, Mont Blanc's allure is irresistible to mountaineers seeking a challenge and a glimpse into the realm of eternal snow and ice.",
+      images: [imgSrc, imgSrc],
+    },
+    {
+      id: '234593',
+      author: 'Eduard Redcliff',
+      date: '23.10.2013',
+      summary:
+        "Greetings, fellow adventurers! Today, I am thrilled to share with you the incredible tale of my ascent to Mont Blanc, the majestic monarch of the European Alps. Rising above the pristine landscapes of France and Italy, Mont Blanc's allure is irresistible to mountaineers seeking a challenge and a glimpse into the realm of eternal snow and ice.",
+      images: [imgSrc, imgSrc],
+    },
   ]
 
   return {

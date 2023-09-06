@@ -1,4 +1,5 @@
 import { ArrowLongUpIcon, MapPinIcon, TagIcon } from '@heroicons/react/24/outline'
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import tw from 'twin.macro'
 
@@ -11,12 +12,17 @@ import HikerExperience from './components/HikerExperience'
 import styles from './styles.ts'
 import useSitePage from './useSitePage.ts'
 
+const DEFAULT_EXPERIENCES = 2
+const EXPANDED_EXPERIENCES = 10
+
 function SitePage() {
   const { t } = useTranslation()
   const {
     site: { title, height, location, complexity, description, tags, img, popularity },
     experiences,
   } = useSitePage()
+
+  const [isReadMoreOpen, setIsReadMoreOpen] = useState(false)
 
   return (
     <div tw='m-16'>
@@ -56,11 +62,17 @@ function SitePage() {
       <div css={styles.experiencesSection}>
         <h2 css={styles.hikersExperiences}>{t('site.hikersExperiences')}</h2>
         <div css={styles.experiences}>
-          {experiences.map((experience) => (
-            <HikerExperience key={experience.id} {...experience} />
-          ))}
+          {experiences
+            .slice(0, isReadMoreOpen ? EXPANDED_EXPERIENCES : DEFAULT_EXPERIENCES)
+            .map((experience) => (
+              <HikerExperience key={experience.id} {...experience} />
+            ))}
         </div>
-        <Button variant='tertiary'>{t('readMore')}</Button>
+        {!isReadMoreOpen && (
+          <Button variant='tertiary' onClick={() => setIsReadMoreOpen(true)}>
+            {t('readMore')}
+          </Button>
+        )}
         <Button>{t('site.addYourExperience')}</Button>
       </div>
     </div>
