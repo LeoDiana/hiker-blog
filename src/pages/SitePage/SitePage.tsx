@@ -20,7 +20,17 @@ function SitePage() {
     isReadMoreOpen,
     expandExperiences,
     data: {
-      site: { title, height, location, complexity, description, tags, img, popularity },
+      site: {
+        title,
+        height,
+        location,
+        complexity,
+        description,
+        tags,
+        img,
+        popularity,
+        locationLink,
+      },
       experiences,
     },
   } = useSitePage()
@@ -56,7 +66,7 @@ function SitePage() {
                 <Tag key={tag}>{tag}</Tag>
               ))}
             </div>
-            <Location customStyles={styles.map} />
+            <Location customStyles={styles.map} locationLink={locationLink} />
           </div>
         </div>
       </div>

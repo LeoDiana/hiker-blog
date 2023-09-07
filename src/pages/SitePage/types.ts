@@ -17,6 +17,7 @@ export interface Site {
   tags: Tag[]
   img: string
   popularity: number
+  locationLink: string
 }
 
 export enum Complexity {

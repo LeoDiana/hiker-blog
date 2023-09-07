@@ -31,6 +31,8 @@ function useSitePage() {
     tags: ['Seven Summits', 'Europe', 'Alps'],
     img: imgSrc,
     popularity: 15,
+    locationLink:
+      'https://www.google.com/maps/embed/v1/place?q=RVM8+23+Saint-Gervais-les-Bains,+France&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8',
   } satisfies Site
 
   const experiences = [
